@@ -431,4 +431,7 @@ class String
     Extlib::Inflection.plural(self)
   end
   alias_method(:pluralize, :plural)
+  def quantify(n)
+    n == 1 ? self : Extlib::Inflection.plural(self)
+  end
 end
